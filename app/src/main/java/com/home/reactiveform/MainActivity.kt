@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
 
+        val text = "hello"
         val emailStream = RxTextView.textChanges(activityMainBinding.edEmail)
             .skipInitialValue()
             .map { email ->
